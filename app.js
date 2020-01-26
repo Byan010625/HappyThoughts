@@ -6,7 +6,7 @@ const cors = require('cors');
 const bodyParser = require('body-parser');
 const bcrypt = require('bcryptjs');
 var mongoDB = 'mongodb+srv://jaikumar:Chicagobulls30@cluster0-ajvse.mongodb.net/local_library?retryWrites=true&w=majority'
-mongoose.connect(mongoDB, {useNewUrlParser : true});
+mongoose.connect(mongoDB, {useNewUrlParser : true, useUnifiedTopology: true});
 var db = mongoose.connection;
 db.on('error', console.error.bind(console, 'MongoDB connection error:'));
 const app = express();
